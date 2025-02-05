@@ -1,0 +1,95 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ece509;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: #4caf50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .cell:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .cell.X {
+    background-color: #ff5722;
+  }
+  
+  .cell.O {
+    background-color: #2196f3;
+  }
+  
+  .status {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  #reset {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  #reset:hover {
+    background-color: #e53935;
+    transform: scale(1.1);
+  }
+  
+  .winning-cell {
+    animation: winAnimation 1s infinite;
+  }
+  
+  @keyframes winAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
